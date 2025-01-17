@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Splash Screen -->
+  <div class="splash-screen">
+    <h1>T I C T A C T O E</h1>
+  </div>
+
+  <!-- Login Screen -->
+  <div class="username-screen hidden">
+    <h2>Welcome!</h2>
+    <p>Please enter your name:</p>
+    <form id="username-form">
+      <input 
+        type="text" 
+        id="username-input" 
+        class="username-input" 
+        placeholder="Your Name" 
+        required 
+      />
+      <button type="submit" class="start-btn">Start Game</button>
+    </form>
+  </div>
+
+  <!-- Game Screen -->
+  <div class="game-screen hidden">
+    <h2 id="player-name"></h2>
+    <div class="board">
+      <!-- Tic Tac Toe grid -->
+      <div class="cell" data-index="0"></div>
+      <div class="cell" data-index="1"></div>
+      <div class="cell" data-index="2"></div>
+      <div class="cell" data-index="3"></div>
+      <div class="cell" data-index="4"></div>
+      <div class="cell" data-index="5"></div>
+      <div class="cell" data-index="6"></div>
+      <div class="cell" data-index="7"></div>
+      <div class="cell" data-index="8"></div>
+    </div>
+    <p id="game-status"></p>
+    <button id="restart-btn" class="restart-btn hidden">Restart Game</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

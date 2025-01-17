@@ -1,0 +1,97 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1e90ff, #ff7f50);
+  color: white;
+  overflow: hidden;
+}
+
+/* Splash Screen */
+.splash-screen {
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.splash-screen.exit {
+  animation: fadeOut 1s forwards;
+}
+
+/* Username Screen */
+.username-screen, .game-screen {
+  text-align: center;
+  display: none;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Tic Tac Toe Board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  margin: 20px auto;
+  width: 300px;
+  height: 300px;
+}
+
+.cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.cell:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.cell.taken {
+  cursor: not-allowed;
+}
+
+/* Buttons */
+.start-btn, .restart-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #ff5722;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.start-btn:hover, .restart-btn:hover {
+  background: #ff3d00;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
